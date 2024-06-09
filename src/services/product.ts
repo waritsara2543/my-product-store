@@ -1,5 +1,5 @@
 const getProducts = async () => {
-  return fetch("http://localhost:3000/products/api")
+  return fetch(process.env.NEXT_PUBLIC_API_URL + "/products/api")
     .then((res) => res.json())
     .then((data) => data.product);
 };
